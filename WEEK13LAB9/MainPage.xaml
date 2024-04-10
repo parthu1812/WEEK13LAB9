@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WEEK13LAB9.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label x:Name="DisplayLabel"
+               Text="0"
+               FontSize="32"
+               HorizontalTextAlignment="End"
+               VerticalOptions="Start"
+               Margin="0,0,0,20"/>
+
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Start"
+              RowSpacing="10"
+              ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Number buttons with Margin and Size adjustments -->
+            <Button Text="1" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="2" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="3" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="7" Grid.Row="3" Grid.Column="0" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="8" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="9" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="white" Margin="5" WidthRequest="60" HeightRequest="60"/>
+
+            <!-- Operator buttons with Margin and Size adjustments -->
+            <Button Text="+" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="gold" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="gold" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="*" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="gold" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="/" Grid.Row="4" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="gold" Margin="5" WidthRequest="60" HeightRequest="60"/>
+
+            <!-- Equals and Clear buttons with Margin and Size adjustments -->
+            <Button Text="=" Grid.Row="4" Grid.Column="2" Clicked="OnEqualsClicked" BackgroundColor="Gray" Margin="5" WidthRequest="60" HeightRequest="60"/>
+            <Button Text="C" Grid.Row="4" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="gray" Margin="5" WidthRequest="60" HeightRequest="60"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
